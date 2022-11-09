@@ -10,6 +10,7 @@ import java.util.List;
 public class UserService {
     private final UserRepository userRepository;
 
+
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
@@ -23,6 +24,10 @@ public class UserService {
     }
 
     public void saveUser(User user) {
+        userRepository.save(user);
+    }
+
+    public void updateUser(User user) {
         userRepository.save(user);
     }
 
